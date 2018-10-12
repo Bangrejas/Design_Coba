@@ -1,0 +1,377 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: sans-serif;
+}
+.logo {
+    position: fixed;
+    float: left;
+    margin: 25px 15px;
+    color: #ffffff;
+    font-size: 45px;
+    font-family:"Barry Kades_PersonalUseOnly";
+    font-variant:normal;
+    font-weight:normal;
+}
+nav {
+    position: fixed;
+    width: 100%;
+}
+nav ul {
+    list-style: none;
+    background: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    color: #ffffff;
+    padding: 0;
+    text-align: right;
+    margin: 0;
+    transition: 1s;
+}
+nav.black ul {
+    background: #6d6c6c;
+}
+nav ul li {
+  margin-top: 10px;
+    display: inline-block;
+    padding: 20px;
+}
+nav ul li a {
+  padding: 5px 0px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 25px;
+    transition: all 0.2s linear;
+}
+nav ul li a:hover {
+    border-radius: 30px;
+    padding: 10px 10px;
+    color: #1b1818;
+    background-color: white;
+    opacity: 1;
+    transition: all 0.2s linear;
+}
+.menu-icon {
+    color: #ffffff;
+    width: 100%;
+    background: #6d6c6c;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 15px 24px;
+    cursor: pointer;
+    display: none;
+}
+@media(max-width: 580px) {
+    .logo {
+        position: fixed;
+        top: 0;
+        margin-top: 16px;
+    }
+    nav ul {
+        max-height: 0px;
+        background: #6d6c6c;
+    }
+    nav.black ul {
+        background: #6d6c6c;
+    }
+    .showing {
+        max-height: 20em;
+    }
+    nav ul li {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 24px 0;
+        text-align: center;
+    }
+    .menu-icon {
+        display: block;
+    }
+}
+
+/*search vbrohk*/
+
+.search-box {
+    position: relative;
+    display: inline-block;
+    border: 2px solid #;
+    border-radius: 20px;
+  }
+  .search-box input[type="text"] {
+    -webkit-appearance: none;
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    z-index: 1;
+    -webkit-transition: all 0.5s ease-out 0.5s;
+    transition: all 0.5s ease-out 0.5s;
+    outline: none;
+  }
+  .search-box input[type="text"]:focus {
+    width: 280px;
+    height: 30px;
+    margin-right: 20px;
+    -webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s;
+  }
+  .search-box input[type="text"]:focus + span::before {
+    height: 14px;
+    margin: -22px 0 0 -15px;
+    -webkit-transition: all 0.2s ease-out 0.5s;
+    transition: all 0.2s ease-out 0.5s;
+  }
+  .search-box input[type="text"]:focus + span::after {
+    visibility: visible;
+    margin: -22px 0 0 -15px;
+    -webkit-transition: all 0.2s ease-out 0.7s;
+    transition: all 0.2s ease-out 0.7s;
+  }
+  .search-box span {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    z-index: 10;
+  }
+  .search-box span::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 8px;
+    margin: -4px 0 0 0;
+    background-color: #fff;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transition: all 0.2s ease-out 0.2s;
+    transition: all 0.2s ease-out 0.2s;
+  }
+  .search-box span::after {
+    content: '';
+    visibility: hidden;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 14px;
+    margin: -36px 0 0 5px;
+    background-color: #fff;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transition: all 0.2s ease-out 0s;
+    transition: all 0.2s ease-out 0s;
+  }
+.s1 {
+  display: inline-block;
+  width: 100%;
+  background-color: #6d6c6c;
+  height: 90px;
+}
+.s1 .ss1 {
+  float: left;
+  box-sizing: border-box;
+  color: white;
+}
+.s1 .ss1 p {
+  margin-top: 35px;
+  padding: 0 20px;
+  color: white;
+  font-size: 25px;
+}
+.s1 .ss2 {
+  text-align: right;
+  box-sizing: border-box;
+  padding: 0 25px;
+  margin-top: 35px;
+}
+.s1 .ss2 a {
+  font-size: 25px;
+  color:rgb(103, 197, 255);
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*slide bosq*/
+  
+  .slideshow-container {
+    position: relative;
+    margin: auto;
+    min-height: 700px;
+    z-index: 0;
+    width: 100%;
+    height: 700px;
+    display: block;
+    max-width: 1200px;
+    max-height: 700px;
+    overflow: hidden;
+  }
+  
+  #slideshow-background {
+    position: absolute;
+    height: 700px;
+    background-color: black;
+    width: 100%;
+  }
+  
+  @media screen and (max-width: 1200px) {
+    #slideshow-background {
+      display: none;
+    }
+  }
+  
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 64px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+  }
+  
+  /* Position the "next button" to the right */
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  @media screen and (max-width: 800px) {
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0);
+    }
+  }
+  
+  /* Caption text */
+
+  .textdiv {
+    color: black;
+    position: absolute;
+    bottom: 41%;
+    left: 50%;
+    text-align: center;
+    margin: auto;
+  }
+  
+  .text {
+    position: relative;
+    left: -50%;
+    background-color: white;
+    padding: 8px 12px;
+    font-family: 'Lora', serif;
+    font-size: 22px;
+    color: #373737;
+    font-weight: bold;
+    opacity: 0.80;
+    font-style: normal;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor:pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    position: relative;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  .slideimg {
+    min-height: 700px;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .text{
+      font-size: 12px;
+    }
+    .prev, .next {
+      margin-top: -50px;
+    }
+    .textdiv {
+      bottom: 40%;
+    }
+    .slideshow-container {
+      min-height: 300px;
+      height: 300px;
+    }
+    .slideimg {
+      min-height: 300px;
+      height: 300px;
+    }
+  }
+  

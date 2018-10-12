@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Citra Nusantara</title>
+        <link rel="stylesheet" type="text/css" href="model2.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                
+                <nav>
+                    <div class="menu-icon">
+                        <i class="fa fa-bars fa-2x"></i>
+                    </div>
+                    <div class="logo">
+                        Citra Nusantara
+                    </div>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="#">Galery</a></li>
+                            <li><a href="#">Tourism</a></li>
+                            <li><a href="#">Home</a></li>
+                            <li><form name="search">
+                                <label class="search-box">
+                                  <input type="text" />
+                                  <span></span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <div class="content">
+                <img src="p1.jpg" style="width:100%">
+                <div class="s1">
+                    <div class="ss1">
+                    <p>Wisata Pantai</p>
+                    </div>
+                    <div class="ss2">
+                    <a href="#" >Masuk...</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript">
+
+            $(document).ready(function() {
+                $(".menu-icon").on("click", function() {
+                    $("nav ul").toggleClass("showing");
+                });
+            });
+
+            $(window).on("scroll", function() {
+                if($(window).scrollTop()) {
+                    $('nav').addClass('black');
+                }
+                else {
+                    $('nav').removeClass('black');
+                }
+            })
+
+
+            var slideIndex = 0;
+var timeoutHandle;
+function timeout() {
+  timeoutHandle = setTimeout(autoSlide, 5000);
+}
+
+function resettimeout() {
+  clearTimeout(timeoutHandle);
+  timeout();
+}
+
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+  resettimeout();
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+  resettimeout();
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+
+function autoSlide() {
+  /*plusSlides(1);*/
+  showSlides(slideIndex += 1);
+  timeout();
+}
+
+/* END OF SLIDESHOW CODE */
+        </script>
+    </body>
+</html>
